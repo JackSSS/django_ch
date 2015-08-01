@@ -5,7 +5,7 @@
     <a href="/">H O M E</a>
 </nav>
 {% endblock %}
-{% for robot in object_list %}
+
 <div class="list">
     <h3><a href="{{ robot.get_absolute_url }}">{{ robot.name }}</a></h3>
     {% if robot.description %}<p>{{ robot.description }}</p>{% endif %}
@@ -19,6 +19,6 @@
     {% if robot.hreach %}<p><b> H-Reach </b>{{ robot.hreach }}</p>{% endif %}
     {% if robot.structure %}<p><b> Structure </b>{{ robot.structure }}</p>{% endif %}
 </div>
-{% endfor %}
+
 
 
