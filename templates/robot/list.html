@@ -5,7 +5,7 @@
     <a class="navbar-brand page-scroll" href="/">H O M E</a>
 </nav>
 {% endblock %}
-{% for robot in object_list %}
+{% for robot in robot_list %}
 <div class="list">
     <h3><a href="{{ robot.get_absolute_url }}">{{ robot.name }}</a></h3>
     {% if robot.description %}<p>{{ robot.description }}</p>{% endif %}
