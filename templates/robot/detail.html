@@ -1,0 +1,19 @@
+{% extends "robot/list.html" %}
+{% block content %}
+<nav class="navbar navbar-default navbar-fixed-top">
+    <a class="navbar-brand page-scroll" href="/robot">BACK TO THE FUTURE</a>
+</nav>
+<div class="list">
+    <h3>{{ robot.name }}</h3>
+    {% if robot.description %}<p>{{ robot.description }}</p>{% endif %}
+    {% if robot.axes %}<p><b> Axes: </b>{{ robot.axes }}</p>{% endif %}
+    {% if robot.motionrange %}<p><b> Motion Range: </b>{{ robot.motionrange }}</p>{% endif %}
+    {% if robot.speed %}<p><b> Speed: </b>{{ robot.speed }}</p>{% endif %}
+    {% if robot.repeatability %}<p><b> Repeatability: </b>{{ robot.repeatability }}</p>{% endif %}
+    {% if robot.payload %}<p><b> Payload: </b>{{ robot.payload }}</p>{% endif %}
+    {% if robot.mass %}<p><b> Mass: </b>{{ robot.mass }}</p>{% endif %}
+    {% if robot.vreach %}<p><b> V-Reach </b>{{ robot.vreach }}</p>{% endif %}
+    {% if robot.hreach %}<p><b> H-Reach </b>{{ robot.hreach }}</p>{% endif %}
+    {% if robot.structure %}<p><b> Structure </b>{{ robot.structure }}</p>{% endif %}
+</div>
+{% endblock %}

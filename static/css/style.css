@@ -25,17 +25,33 @@ button:hover {
 
 div {
     border-radius: 0.1em;
-    background-color: rgba(0, 0, 0, 0.25);
-    margin-top: 3em;
+    background-color: rgba(0, 0, 0, 0.35);
+    margin-top: .5em;
     margin-left: auto;
     margin-right: auto;
-    width: 22em;
+    width: 24em;
     text-align: left;
+  }
+
+.list{
+    padding: .1em;
 }
 
-li{
-    margin-left: .7em;
+p{
+    margin-left: 1em;
+    color: #eeeeee;
+    max-width: 20em;
 }
 
-li:hover{
-    color: orange;
+h3{
+    margin-left: 1em;
+}
+
+a{
+  text-decoration: none;
+  color: #eeeeee;
+}
+
+a:hover{
+  color: yellow;
+}
