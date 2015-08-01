@@ -69,3 +69,11 @@ class Robot(models.Model):
 
     def get_absolute_url(self):
         return reverse(viewname="robot_list", args=[self.id])
+
+    def get_reviews(self):
+        return self.review_set.all()
+
+class Review(models.Model):
+    robot = models.ForeignKey(Robot)
+    description = models.TextField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)

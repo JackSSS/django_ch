@@ -1,3 +1,0 @@
-{% for location in object_list %}
-    {{ location.title }}
-{% endfor %

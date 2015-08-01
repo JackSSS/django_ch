@@ -15,5 +15,14 @@
     {% if robot.vreach %}<p><b> V-Reach </b>{{ robot.vreach }}</p>{% endif %}
     {% if robot.hreach %}<p><b> H-Reach </b>{{ robot.hreach }}</p>{% endif %}
     {% if robot.structure %}<p><b> Structure </b>{{ robot.structure }}</p>{% endif %}
+    <button class="remove">DELETE</button>
+</div>
+<div class="list">
+    <a href="{% url 'robot_update' pk=robot.id %}">Edit</a>
 </div>
 {% endblock %}
+<div class="col-md-12">
+{% for review in robot.get_reviews %}
+{% include 'base/review.html' with robot=robot %}
+{% endfor %}
+</div>

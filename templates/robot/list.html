@@ -3,10 +3,18 @@
 {% block content %}
 <nav>
     <a href="/">H O M E</a>
+    {% block search %}
+    <form action="/search/" class="navbar-form navbar-right" method="get">
+        <input type="text" placeholder="Search" class="form-control" name="query"></input>
+    </form>
+    {% endblock %}
 </nav>
+<a href="/robot/create/">C R E A T E</a>
 {% endblock %}
 
+{% for robot in object_list %}
 <div class="list">
+
     <h3><a href="{{ robot.get_absolute_url }}">{{ robot.name }}</a></h3>
     {% if robot.description %}<p>{{ robot.description }}</p>{% endif %}
     {% if robot.axes %}<p><b> Axes: </b>{{ robot.axes }}</p>{% endif %}
@@ -18,7 +26,8 @@
     {% if robot.vreach %}<p><b> V-Reach </b>{{ robot.vreach }}</p>{% endif %}
     {% if robot.hreach %}<p><b> H-Reach </b>{{ robot.hreach }}</p>{% endif %}
     {% if robot.structure %}<p><b> Structure </b>{{ robot.structure }}</p>{% endif %}
+    <button class="remove">DELETE</button>
 </div>
-
+{% endfor %}
 
 

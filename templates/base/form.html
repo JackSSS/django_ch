@@ -1,0 +1,34 @@
+{% extends "robot/detail.html" %}
+{% load widget_tweaks %}
+{% block content %}
+<div>
+</div>
+ <section>
+    <div>
+    <nav>
+    <a href="/robot">BACK TO THE FUTURE</a>
+    </nav>
+    <div>
+    {% if form %}
+    <div >
+        <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}{{ form.media }}
+        {% for field in form %}
+        <div>
+            <label for="exampleInputFile">{{ field.label }}</label>
+            {{ field|add_class:"form-control"}}
+            {% if field.help_text %}<p class="help-block">{{ field.help_text }}</p>{% endif %}
+        </div>
+        {% if field.errors %}
+        {% for error in field.errors %}
+        <div id="error_{{ field.name }}">{{ error|escape }}</div>
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+        <button><input type="submit" class="btn btn-success"role="button" value="{{ verb|default:"Submit" }}" /></button>
+        </form>
+    </div>
+    {% endif %}
+    </div>
+    </div>
+</section>
+{% endblock %}
