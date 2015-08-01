@@ -58,7 +58,7 @@ class Robot(models.Model):
     structure = models.IntegerField(choices=RATING_CHOICES, null=True, blank=True)
 
     def __unicode__(self):
-         return self.name
+        return self.name
 
     def get_absolute_url(self):
-     return reverse(viewname="robot_list", args=[self.id])
+        return reverse(viewname="robot_list", args=[self.id])

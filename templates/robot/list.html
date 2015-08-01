@@ -1,11 +1,11 @@
 {% load staticfiles %}
 <link href="{% static "css/style.css" %}" rel="stylesheet">
 {% block content %}
-<nav class="navbar navbar-default navbar-fixed-top">
-    <a class="navbar-brand page-scroll" href="/">H O M E</a>
+<nav>
+    <a href="/">H O M E</a>
 </nav>
 {% endblock %}
-{% for robot in robot_list %}
+{% for robot in object_list %}
 <div class="list">
     <h3><a href="{{ robot.get_absolute_url }}">{{ robot.name }}</a></h3>
     {% if robot.description %}<p>{{ robot.description }}</p>{% endif %}
