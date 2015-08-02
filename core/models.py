@@ -6,12 +6,6 @@ from django.contrib.auth.models import User
 import os
 import uuid
 
-def upload_to_location(instance, filename):
-    blocks = filename.split('.')
-    ext = blocks[-1]
-    filename = "%s.%s" % (uuid.uuid4(), ext)
-    instance.title = blocks[0]
-    return os.path.join('uploads/', filename)
 
 RATING_CHOICES = (
     (0, 'None'),
@@ -73,7 +67,3 @@ class Robot(models.Model):
     def get_reviews(self):
         return self.review_set.all()
 
-class Review(models.Model):
-    robot = models.ForeignKey(Robot)
-    description = models.TextField(null=True, blank=True)
-    created_at = models.DateTimeField(auto_now_add=True)

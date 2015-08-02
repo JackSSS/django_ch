@@ -12,6 +12,11 @@
     </head>
     <body>
         <h1>R T R A C K E R</h1>
-        <a href="/robot">THE ROBOTS</a>
+        <a href="/robot">ROBOT LIST</a>
+        {% block search %}
+        <form action="/search/" class="navbar-form navbar-right" method="get">
+        <input type="text" placeholder="...or search for a robot here" class="form-control" name="query"></input>
+        </form>
+    {% endblock %}
     </body>
 </html>

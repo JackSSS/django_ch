@@ -1,0 +1,16 @@
+{% load staticfiles %}
+<link href="{% static "css/style.css" %}" rel="stylesheet">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <form action="" method="post">
+            {% csrf_token %}
+            <p class="confirm">Are you sure you want to delete "{{ robot.name }}"?</p>
+            <input type="submit" value="Delete"/>
+        </form>
+        <a href="/robot">Cancel</a>
+    </body>
+</html>

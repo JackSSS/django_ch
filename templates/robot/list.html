@@ -3,15 +3,14 @@
 {% block content %}
 <nav>
     <a href="/">H O M E</a>
+</nav>
+<h4><a href="/robot/create/">C R E A T E</a></h4>
     {% block search %}
     <form action="/search/" class="navbar-form navbar-right" method="get">
-        <input type="text" placeholder="Search" class="form-control" name="query"></input>
+        <input type="text" placeholder="Search Robot Name Here" class="form-control" name="query"></input>
     </form>
     {% endblock %}
-</nav>
-<a href="/robot/create/">C R E A T E</a>
 {% endblock %}
-
 {% for robot in object_list %}
 <div class="list">
 
@@ -26,7 +25,7 @@
     {% if robot.vreach %}<p><b> V-Reach </b>{{ robot.vreach }}</p>{% endif %}
     {% if robot.hreach %}<p><b> H-Reach </b>{{ robot.hreach }}</p>{% endif %}
     {% if robot.structure %}<p><b> Structure </b>{{ robot.structure }}</p>{% endif %}
-    <button class="remove">DELETE</button>
+    <a class="list" href="{% url 'delete' pk=robot.id %}">Delete {{ robot.name }}</a>
 </div>
 {% endfor %}
 

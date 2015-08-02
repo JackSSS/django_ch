@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from core.views import RobotDeleteView
 import core.views as coreviews
+
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -25,4 +27,5 @@ urlpatterns = [
     url(r'robot/create/$', coreviews.RobotCreateView.as_view()),
     url(r'search/$', coreviews.SearchListView.as_view()),
     url(r'robot/(?P<pk>\d+)/update/$', coreviews.RobotUpdateView.as_view(), name='robot_update'),
+    url(r'robot/(?P<pk>\d+)/delete/$', coreviews.RobotDeleteView.as_view(), name='delete'),
 ]
