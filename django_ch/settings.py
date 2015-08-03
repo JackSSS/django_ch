@@ -25,7 +25,7 @@ ON_HEROKU = os.environ.get('ON_HEROKU')
 SECRET_KEY = 'o&((z#-m*-4pbq=_8#c3k18_*n4s20)tr0)1%i427wbwy8bqbh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 

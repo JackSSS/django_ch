@@ -23,33 +23,16 @@
         {% if robot.description %}
         <p>{{ robot.description }}</p>
         {% endif %}
-        {% if robot.axes %}
-        <p><b> Axes: </b>{{ robot.axes }}</p>
-        {% endif %}
-        {% if robot.motionrange %}
-        <p><b> Motion Range: </b>{{ robot.motionrange }}</p>
-        {% endif %}
-        {% if robot.speed %}
-        <p><b> Speed: </b>{{ robot.speed }}</p>
-        {% endif %}
-        {% if robot.repeatability %}
-        <p><b> Repeatability: </b>{{ robot.repeatability }}</p>
-        {% endif %}
-        {% if robot.payload %}
-        <p><b> Payload: </b>{{ robot.payload }}</p>
-        {% endif %}
-        {% if robot.mass %}
-        <p><b> Mass: </b>{{ robot.mass }}</p>
-        {% endif %}
-        {% if robot.vreach %}
-        <p><b> V-Reach </b>{{ robot.vreach }}</p>
-        {% endif %}
-        {% if robot.hreach %}
-        <p><b> H-Reach </b>{{ robot.hreach }}</p>
-        {% endif %}
-        {% if robot.structure %}
-        <p><b> Structure </b>{{ robot.structure }}</p>
-        {% endif %}
+        <p><b>AXES: </b>{% if robot.axes %}{{ robot.get_axes_display }}{% else %}----{% endif %}</p>
+
+        <p><b> Motion Range: </b>{% if robot.motionrange %}{{ robot.get_motionrange_display }}{% else %}----{% endif %}</p>
+        <p><b> Speed: </b>{% if robot.speed %}{{ robot.get_speed_display }}{% else %}----{% endif %}</p>
+        <p><b> Repeatability: </b>{% if robot.repeatability %}{{ robot.get_repeatability_diplay }}{% else %}----{% endif %}</p>
+        <p><b> Payload: </b>{% if robot.payload %}{{ robot.get_payload_display }}{% else %}----{% endif %}</p>
+        <p><b> Mass: </b>{% if robot.mass %}{{ robot.get_mass_display }}{% else %}----{% endif %}</p>
+        <p><b> V-Reach </b>{% if robot.vreach %}{{ robot.get_vreach_display }}{% else %}----{% endif %}</p>
+        <p><b> H-Reach </b>{% if robot.hreach %}{{ robot.get_hreach_display }}{% else %}----{% endif %}</p>
+        <p><b> Structure </b>{% if robot.structure %}{{ robot.get_structure_display }}{% else %}----{% endif %}</p>
         <button><a class="list" href="{% url 'delete' pk=robot.id %}">Delete</a></button>
     </div>
     {% endfor %}
