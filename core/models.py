@@ -31,10 +31,10 @@ SPEED_CHOICES = (
     )
 
 PLURAL_CHOICES = (
-    (0, 'None'),
-    (1, 'Minimal'),
-    (2, 'Some'),
-    (3, 'Ample')
+    (0, 'none'),
+    (1, 'minimal'),
+    (2, 'some'),
+    (3, 'ample')
     )
 
 YESNO_CHOICES = (
