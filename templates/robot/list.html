@@ -25,8 +25,6 @@
     {% if robot.vreach %}<p><b> V-Reach </b>{{ robot.vreach }}</p>{% endif %}
     {% if robot.hreach %}<p><b> H-Reach </b>{{ robot.hreach }}</p>{% endif %}
     {% if robot.structure %}<p><b> Structure </b>{{ robot.structure }}</p>{% endif %}
-    <a class="list" href="{% url 'delete' pk=robot.id %}">Delete {{ robot.name }}</a>
+    <button><a class="list" href="{% url 'delete' pk=robot.id %}">Delete</a></button>
 </div>
 {% endfor %}
-
-

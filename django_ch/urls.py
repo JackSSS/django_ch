@@ -22,7 +22,7 @@ import core.views as coreviews
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', coreviews.LandingView.as_view()),
-    url(r'robot/$', coreviews.RobotListView.as_view()),
+    url(r'robot/$', coreviews.RobotListView.as_view(), name='list'),
     url(r'robot/(?P<pk>\d+)/detail/$', coreviews.DetailListView.as_view(), name='robot_list'),
     url(r'robot/create/$', coreviews.RobotCreateView.as_view()),
     url(r'search/$', coreviews.SearchListView.as_view()),

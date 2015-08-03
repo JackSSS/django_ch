@@ -8,7 +8,7 @@
     <body>
         <form action="" method="post">
             {% csrf_token %}
-            <p class="confirm">Are you sure you want to delete "{{ robot.name }}"?</p>
+            <p class="confirm">Are you sure you want to delete this robot?</p>
             <input type="submit" value="Delete"/>
         </form>
         <a href="/robot">Cancel</a>

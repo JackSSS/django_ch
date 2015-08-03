@@ -35,8 +35,8 @@ class RobotUpdateView(UpdateView):
 class RobotDeleteView(DeleteView):
     model = coremodels.Robot
     template_name = 'robot/delete.html'
-    context_object_name = 'Robot'
-    success_url = reverse_lazy('name')
+    context_object_name = 'item'
+    success_url = reverse_lazy('list')
 
 class SearchListView(RobotListView):
     def get_queryset(self):
