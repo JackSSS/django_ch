@@ -1,21 +1,47 @@
-{% extends "robot/list.html" %}
-<!doctype html>
-{% block content %}
-<nav>
-    <a href="/robot">BACK TO THE FUTURE</a>
-</nav>
-<div class="list">
-    <h3>{{ robot.name }}</h3>
-    {% if robot.description %}<p>{{ robot.description }}</p>{% endif %}
-    {% if robot.axes %}<p><b> Axes: </b>{{ robot.axes }}</p>{% endif %}
-    {% if robot.motionrange %}<p><b> Motion Range: </b>{{ robot.motionrange }}</p>{% endif %}
-    {% if robot.speed %}<p><b> Speed: </b>{{ robot.speed }}</p>{% endif %}
-    {% if robot.repeatability %}<p><b> Repeatability: </b>{{ robot.repeatability }}</p>{% endif %}
-    {% if robot.payload %}<p><b> Payload: </b>{{ robot.payload }}</p>{% endif %}
-    {% if robot.mass %}<p><b> Mass: </b>{{ robot.mass }}</p>{% endif %}
-    {% if robot.vreach %}<p><b> V-Reach </b>{{ robot.vreach }}</p>{% endif %}
-    {% if robot.hreach %}<p><b> H-Reach </b>{{ robot.hreach }}</p>{% endif %}
-    {% if robot.structure %}<p><b> Structure </b>{{ robot.structure }}</p>{% endif %}
-    <button><a href="{% url 'robot_update' pk=robot.id %}">Edit</a></button>
-</div>
-{% endblock %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>R T R A C K E R</title>
+        <link href="{% static "css/style.css" %}" rel="stylesheet">
+    </head>
+    {% block content %}
+    <nav>
+        <a href="/robot">BACK TO THE FUTURE</a>
+    </nav>
+    <div class="list">
+        <h3>{{ robot.name }}</h3>
+        {% if robot.description %}
+        <p>{{ robot.description }}</p>
+        {% endif %}
+        {% if robot.axes %}
+        <p><b> Axes: </b>{{ robot.axes }}</p>
+        {% endif %}
+        {% if robot.motionrange %}
+        <p><b> Motion Range: </b>{{ robot.motionrange }}</p>
+        {% endif %}
+        {% if robot.speed %}
+        <p><b> Speed: </b>{{ robot.speed }}</p>
+        {% endif %}
+        {% if robot.repeatability %}
+        <p><b> Repeatability: </b>{{ robot.repeatability }}</p>
+        {% endif %}
+        {% if robot.payload %}
+        <p><b> Payload: </b>{{ robot.payload }}</p>
+        {% endif %}
+        {% if robot.mass %}
+        <p><b> Mass: </b>{{ robot.mass }}</p>
+        {% endif %}
+        {% if robot.vreach %}
+        <p><b> V-Reach </b>{{ robot.vreach }}</p>
+        {% endif %}
+        {% if robot.hreach %}
+        <p><b> H-Reach </b>{{ robot.hreach }}</p>
+        {% endif %}
+        {% if robot.structure %}
+        <p><b> Structure </b>{{ robot.structure }}</p>
+        {% endif %}
+        <button><a href="{% url 'robot_update' pk=robot.id %}">Edit</a></button>
+    </div>
+    {% endblock %}

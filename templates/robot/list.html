@@ -1,30 +1,55 @@
 {% load staticfiles %}
-<link href="{% static "css/style.css" %}" rel="stylesheet">
-{% block content %}
-<nav>
-    <a href="/">H O M E</a>
-</nav>
-<h4><a href="/robot/create/">C R E A T E</a></h4>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>R T R A C K E R</title>
+        <link href="{% static "css/style.css" %}" rel="stylesheet">
+    </head>
+    {% block content %}
+    <nav>
+        <a href="/">H O M E</a>
+    </nav>
+    <h4><a href="/robot/create/">C R E A T E</a></h4>
     {% block search %}
     <form action="/search/" class="navbar-form navbar-right" method="get">
         <input type="text" placeholder="Search Robot Name Here" class="form-control" name="query"></input>
     </form>
     {% endblock %}
-{% endblock %}
-{% for robot in robot_list %}
-<div class="list">
-
-    <h3><a href="{{ robot.get_absolute_url }}">{{ robot.name }}</a></h3>
-    {% if robot.description %}<p>{{ robot.description }}</p>{% endif %}
-    {% if robot.axes %}<p><b> Axes: </b>{{ robot.axes }}</p>{% endif %}
-    {% if robot.motionrange %}<p><b> Motion Range: </b>{{ robot.motionrange }}</p>{% endif %}
-    {% if robot.speed %}<p><b> Speed: </b>{{ robot.speed }}</p>{% endif %}
-    {% if robot.repeatability %}<p><b> Repeatability: </b>{{ robot.repeatability }}</p>{% endif %}
-    {% if robot.payload %}<p><b> Payload: </b>{{ robot.payload }}</p>{% endif %}
-    {% if robot.mass %}<p><b> Mass: </b>{{ robot.mass }}</p>{% endif %}
-    {% if robot.vreach %}<p><b> V-Reach </b>{{ robot.vreach }}</p>{% endif %}
-    {% if robot.hreach %}<p><b> H-Reach </b>{{ robot.hreach }}</p>{% endif %}
-    {% if robot.structure %}<p><b> Structure </b>{{ robot.structure }}</p>{% endif %}
-    <button><a class="list" href="{% url 'delete' pk=robot.id %}">Delete</a></button>
-</div>
-{% endfor %}
+    {% endblock %}
+    {% for robot in robot_list %}
+    <div class="list">
+        <h3><a href="{{ robot.get_absolute_url }}">{{ robot.name }}</a></h3>
+        {% if robot.description %}
+        <p>{{ robot.description }}</p>
+        {% endif %}
+        {% if robot.axes %}
+        <p><b> Axes: </b>{{ robot.axes }}</p>
+        {% endif %}
+        {% if robot.motionrange %}
+        <p><b> Motion Range: </b>{{ robot.motionrange }}</p>
+        {% endif %}
+        {% if robot.speed %}
+        <p><b> Speed: </b>{{ robot.speed }}</p>
+        {% endif %}
+        {% if robot.repeatability %}
+        <p><b> Repeatability: </b>{{ robot.repeatability }}</p>
+        {% endif %}
+        {% if robot.payload %}
+        <p><b> Payload: </b>{{ robot.payload }}</p>
+        {% endif %}
+        {% if robot.mass %}
+        <p><b> Mass: </b>{{ robot.mass }}</p>
+        {% endif %}
+        {% if robot.vreach %}
+        <p><b> V-Reach </b>{{ robot.vreach }}</p>
+        {% endif %}
+        {% if robot.hreach %}
+        <p><b> H-Reach </b>{{ robot.hreach }}</p>
+        {% endif %}
+        {% if robot.structure %}
+        <p><b> Structure </b>{{ robot.structure }}</p>
+        {% endif %}
+        <button><a class="list" href="{% url 'delete' pk=robot.id %}">Delete</a></button>
+    </div>
+    {% endfor %}

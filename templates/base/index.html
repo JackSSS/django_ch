@@ -1,22 +1,18 @@
 {% load staticfiles %}
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="UTF-8">
-
         <title>R T R A C K E R</title>
-
         <link href="{% static "css/style.css" %}" rel="stylesheet">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     </head>
     <body>
         <h1>R T R A C K E R</h1>
         <a href="/robot">ROBOT LIST</a>
         {% block search %}
         <form action="/search/" class="navbar-form navbar-right" method="get">
-        <input type="text" placeholder="...or search for a robot here" class="form-control" name="query"></input>
+            <input type="text" placeholder="...or search for a robot here" class="form-control" name="query"></input>
         </form>
-    {% endblock %}
+        {% endblock %}
     </body>
 </html>
