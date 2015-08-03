@@ -23,7 +23,7 @@
         {% if robot.description %}
         <p>{{ robot.description }}</p>
         {% endif %}
-        <p><b>AXES: </b>{% if robot.axes %}{{ robot.get_axes_display }}{% else %}----{% endif %}</p>
+        <p><b>AXLES: </b>{% if robot.axles %}{{ robot.get_axles_display }}{% else %}----{% endif %}</p>
 
         <p><b> Motion Range: </b>{% if robot.motionrange %}{{ robot.get_motionrange_display }}{% else %}----{% endif %}</p>
         <p><b> Speed: </b>{% if robot.speed %}{{ robot.get_speed_display }}{% else %}----{% endif %}</p>

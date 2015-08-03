@@ -48,7 +48,7 @@ class Robot(models.Model):
     name = models.CharField(max_length=300)
     description = models.TextField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    axes = models.IntegerField(choices=MULTI_CHOICES, null=True, blank=True)
+    axles = models.IntegerField(choices=MULTI_CHOICES, null=True, blank=True)
     motionrange = models.IntegerField(choices=PLURAL_CHOICES, null=True, blank=True)
     speed = models.IntegerField(choices=SPEED_CHOICES, null=True, blank=True)
     repeatability = models.IntegerField(choices=YESNO_CHOICES, null=True, blank=True)
