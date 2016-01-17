@@ -1,2 +1,3 @@
-# django_ch
-This app is created for the python dev accelerator coding challenge
+#CRUD with Django
+
+Evaluation of CRUD (create, remove, update, delete) with Django...using robots
