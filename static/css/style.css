@@ -11,9 +11,9 @@ body {
 button {
     font-family: Verdana;
     padding: 0.3em;
-    color: #eeeeee;
+    color: #eee;
     font-size: .5em;
-    border: 1px solid #003366;
+    border: 1px solid #fff;
     border-radius: .3em;
     background-color: rgba(0, 0, 0, 0.35);
     width: 6em;
@@ -34,7 +34,13 @@ button:hover {
   }
 
 .create-form {
-    background-color: #000;
+    background-color: #eee;
+    border-radius: 0.1em;
+    margin-top: .5em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 24em;
+    text-align: left;
 }
 
 .list {
