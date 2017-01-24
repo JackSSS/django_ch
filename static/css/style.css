@@ -1,5 +1,6 @@
 body {
-   background-image: url("http://buythesky.com.au/App_Themes/RFDS/img/template/background-video-poster.jpg");
+   background-image: url("http://buythesky.com.au/App_Themes/RFDS/img/template/background-video-poster.jpg") ;
+   background-repeat: no-repeat;
    background-size: cover;
    background-attachment: fixed;
    font-family: Verdana;
