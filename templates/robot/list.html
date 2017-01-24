@@ -3,14 +3,12 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>R T R A C K E R</title>
+        <title>R|T R A C K E R</title>
         <link href="{% static "css/style.css" %}" rel="stylesheet">
     </head>
     {% block content %}
-    <nav>
-        <a href="/">H O M E</a>
-    </nav>
-    <h4><a href="/robot/create/">C R E A T E</a></h4>
+    <h1><a href="/">R|T R A C K E R</a></h1>
+    <h4><a href="/robot/create/">CREATE A ROBOT</a></h4>
     {% block search %}
     <form action="/search/" class="navbar-form navbar-right" method="get">
         <input type="text" placeholder="Search Robot Name Here" class="form-control" name="query"></input>
