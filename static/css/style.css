@@ -27,6 +27,8 @@ button:hover {
     border: none;
     color: #fff;
     background-color: #000;
+    width: 52px;
+    height: 20px;
 }
 
 .list {
@@ -69,7 +71,7 @@ input {
   height: 30px;
 }
 
-text-area {
+textarea {
   height: 50px;
   display: block;
 }
