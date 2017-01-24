@@ -33,11 +33,11 @@ div {
     text-align: left;
   }
 
-.list{
+.list {
     padding: .1em;
 }
 
-.confirm{
+.confirm {
     border-radius: 0.1em;
     margin-top: 6em;
     margin-left: auto;
@@ -48,17 +48,17 @@ div {
     padding: 1em;
 }
 
-p{
+p {
     margin-left: 1em;
     color: #eeeeee;
     max-width: 20em;
 }
 
-h3{
+h3 {
     margin-left: 1em;
 }
 
-a{
+a {
   text-decoration: none;
   color: #eeeeee;
 }

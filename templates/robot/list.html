@@ -4,6 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <title>R T R A C K E R</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link href="{% static "css/style.css" %}" rel="stylesheet">
     </head>
     {% block content %}
@@ -27,7 +29,7 @@
 
         <p><b> Motion Range: </b>{% if robot.motionrange %}{{ robot.get_motionrange_display }}{% else %}----{% endif %}</p>
         <p><b> Speed: </b>{% if robot.speed %}{{ robot.get_speed_display }}{% else %}----{% endif %}</p>
-        <p><b> Repeatability: </b>{% if robot.repeatability %}{{ robot.get_repeatability_diplay }}{% else %}----{% endif %}</p>
+        <p><b> Repeatability: </b>{% if robot.repeatability %}{{ robot.get_repeatability_display }}{% else %}----{% endif %}</p>
         <p><b> Payload: </b>{% if robot.payload %}{{ robot.get_payload_display }}{% else %}----{% endif %}</p>
         <p><b> Mass: </b>{% if robot.mass %}{{ robot.get_mass_display }}{% else %}----{% endif %}</p>
         <p><b> V-Reach </b>{% if robot.vreach %}{{ robot.get_vreach_display }}{% else %}----{% endif %}</p>
