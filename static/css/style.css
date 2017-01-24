@@ -50,7 +50,9 @@ button:hover {
     width: 24em;
     text-align: left;
 }
-
+.create-form input {
+  display: block;
+}
 .list {
     padding: .1em;
 }
