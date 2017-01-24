@@ -81,7 +81,7 @@ form {
   font-size: 20px;
 }
 
-p {
+.list p {
     margin-left: 1em;
     color: #eeeeee;
     max-width: 20em;
