@@ -23,7 +23,7 @@ button:hover {
     color: #fff538;
 }
 
-button > input {
+.create-submit {
     border: none;
     color: #fff;
     background-color: #000;
