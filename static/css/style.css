@@ -23,7 +23,7 @@ button:hover {
     color: #fff538;
 }
 
-div {
+.list {
     border-radius: 0.1em;
     background-color: rgba(0, 0, 0, 0.35);
     margin-top: .5em;
@@ -32,6 +32,10 @@ div {
     width: 24em;
     text-align: left;
   }
+
+.create-form {
+    background-color: #000;
+}
 
 .list {
     padding: .1em;
